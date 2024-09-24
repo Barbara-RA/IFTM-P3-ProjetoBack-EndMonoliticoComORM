@@ -1,0 +1,47 @@
+### Testar Endereços
+GET http://localhost:8080/endereco
+
+POST http://localhost:8080/endereco
+Content-Type: application/json
+
+{
+  "rua": "Rua A",
+  "numero": "123",
+  "cidade": "Uberlândia",
+  "estado": "MG",
+  "cep": "38400-000"
+}
+
+### Testar Pacotes
+GET http://localhost:8080/pacote
+
+POST http://localhost:8080/pacote
+Content-Type: application/json
+
+{
+  "localizadorPacoteId": "123456",
+  "destinatario": "Barbara Ramos",
+  "endereco": {
+    "id": 1
+  },
+  "status": "pendente"
+}
+
+GET http://localhost:8080/pacote/1
+
+PUT http://localhost:8080/pacote/1
+Content-Type: application/json
+
+{
+  "localizadorPacoteId": "123456",
+  "destinatario": "Barbara Ramos",
+  "endereco": {
+    "id": 1
+  },
+  "status": "em trânsito"
+}
+
+DELETE http://localhost:8080/pacote/1
+
+### Testar Rastreamento
+GET http://localhost:8080/rastreamento/1

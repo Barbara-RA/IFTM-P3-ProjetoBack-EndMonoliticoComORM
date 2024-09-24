@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-RastreamentoApplication<rastreamento>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.edu.iftm.rastreamento.RastreamentoApplication",
+            "projectName": "rastreamento",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

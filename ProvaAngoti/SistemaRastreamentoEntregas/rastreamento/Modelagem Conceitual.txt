@@ -1,0 +1,37 @@
++---------------------+
+|       Pacote        |
++---------------------+
+| - id: String        |
+| - destinatario: String|
+| - endereco: Endereco|
+| - status: String    |
++---------------------+
+| + atualizarStatus(novoStatus: String, dataHora: Date, localizacao: String): void |
+| + consultarInformacoes(): String                                                 |
++---------------------+
+
++---------------------+
+|    Rastreamento     |
++---------------------+
+| - dataHora: Date    |
+| - status: String    |
+| - localizacao: String|
++---------------------+
+| + getResumo(): String|
++---------------------+
+
++---------------------+
+|      Endereco       |
++---------------------+
+| - rua: String       |
+| - numero: String    |
+| - cidade: String    |
+| - estado: String    |
+| - cep: String       |
++---------------------+
+| + getEnderecoCompleto(): String |
++---------------------+
+
+Pacote 1..* --> 1 Endereco
+Pacote 1..* <-- 0..* Rastreamento
+
